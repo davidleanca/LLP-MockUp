@@ -1,0 +1,121 @@
+<body>
+  <app-header [courses]="courses" class="header"></app-header>
+  <div class="part-1">
+    <div>
+      <img class="part-1-image" src="../assets/Part-1-v6.png" />
+      <div class="text-1-and-button">
+        <div class="text-block text-1 font-size">
+          <div>
+            <h3>{{ text1Title }}</h3>
+          </div>
+          <div>{{ text1Content }}</div>
+        </div>
+        <app-button1 [Text]="button1Text" class="font-size"></app-button1>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-2">
+    <div class="part-2-section-1">
+      <div class="text-block text-2-and-button font-size">
+        <div>
+          <h3>{{ text2Title }}</h3>
+        </div>
+        <div>{{ text2Content }}</div>
+        <app-button2
+          [Text]="button2Text"
+          class="learn-more-button font-size"
+        ></app-button2>
+      </div>
+      <div>
+        <img
+          class="part-2-section-1-image"
+          src="../assets/books.png"
+          alt="Avatar"
+        />
+      </div>
+    </div>
+    <img class="part-2-section-2-bg-image" src="../assets/Part-2-paint.png" />
+    <div class="part-2-section-2">
+      <div>
+        <img
+          class="part-2-section-2-image"
+          src="../assets/thinking_woman.jpg"
+          alt="Avatar"
+        />
+      </div>
+      <div class="text-block text-3 right font-size">
+        <div>
+          <h3>{{ text3Title }}</h3>
+        </div>
+        <div>{{ text3Content }}</div>
+        <app-button2
+          [Text]="button3Text"
+          class="start-test-button font-size"
+        ></app-button2>
+      </div>
+    </div>
+  </div>
+  <div class="part-3">
+    <div class="part-3-title">
+      <h3>{{ part3Title }}</h3>
+    </div>
+    <div class="courses-cards">
+      <div class="course-card" *ngFor="let course of courses">
+        {{ course }}
+      </div>
+    </div>
+  </div>
+
+  <div class="part-4">
+    <div class="part-4-section-1">
+      <div>
+        <img
+          class="part-2-section-1-image"
+          src="../assets/books.png"
+          alt="Avatar"
+        />
+      </div>
+      <div class="text-block text-4 left font-size">
+        <div>
+          <h3>{{ text4Title }}</h3>
+        </div>
+        <div>{{ text4Content }}</div>
+      </div>
+    </div>
+    <div class="part-4-section-1">
+      <div class="text-block text-4 left font-size">
+        <div>
+          <h3>{{ text5Title }}</h3>
+        </div>
+        <div>{{ text5Content }}</div>
+      </div>
+      <div>
+        <img
+          class="part-2-section-1-image"
+          src="../assets/books.png"
+          alt="Avatar"
+        />
+      </div>
+    </div>
+    <div class="part-4-section-1">
+      <div>
+        <img
+          class="part-2-section-1-image"
+          src="../assets/books.png"
+          alt="Avatar"
+        />
+      </div>
+      <div class="text-block text-4 left font-size">
+        <div>
+          <h3>{{ text6Title }}</h3>
+        </div>
+        <div>{{ text6Content }}</div>
+      </div>
+    </div>
+  </div>
+  <app-footer
+    [footerTexts]="footerTexts"
+    [rightsReservedText]="rightsReservedText"
+  ></app-footer>
+</body>

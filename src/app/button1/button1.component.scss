@@ -1,0 +1,13 @@
+@import "../scss-variables.scss";
+
+.button1 {
+  border: 1px solid white;
+  border-radius: 22px;
+  text-align: center;
+  padding: clamp(0.1px, 2vh, 3px) clamp(1px, 1vw, 100px); /* padding-ul va fi întotdeauna între 10px și 50px, dar se va ajusta în funcție de 2% din lățimea viewport-ului */
+  color: white;
+  cursor: pointer;
+}
+.font-size {
+  font-size: clamp(3px, 0.6vw, 20px);
+}

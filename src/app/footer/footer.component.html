@@ -1,0 +1,14 @@
+<div class="container">
+  <img class="image" src="../assets/footer-cu-dumbo.png" />
+  <div class="information-container">
+    <div class="information-items">
+      <button
+        class="information-item white font-size"
+        *ngFor="let text of footerTexts"
+      >
+        {{ text }}
+      </button>
+    </div>
+    <div class="rights-reserved white">{{ rightsReservedText }}</div>
+  </div>
+</div>

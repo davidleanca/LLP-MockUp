@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="image-container">
+    <img class="logo-image" src="../assets/logo.png" />
+  </div>
+  <div class="action-buttons-container">
+    <button><p>About us</p></button>
+    <button><p>Home</p></button>
+    <div class="dropdown">
+      <p class="dropbtn">Courses</p>
+      <div class="dropdown-content">
+        <button class="course-button" *ngFor="let course of courses">
+          <p class="course">{{ course }}</p>
+        </button>
+      </div>
+    </div>
+    <button><p>Blog</p></button>
+    <button><p>Free Lecture</p></button>
+    <button><p>Test Your Knowledge</p></button>
+  </div>
+  <div class="authentication-buttons-container">
+    <button><p>Log In</p></button>
+    <button><p>Sign Up</p></button>
+  </div>
+</div>

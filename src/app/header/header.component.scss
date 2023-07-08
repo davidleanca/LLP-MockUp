@@ -1,0 +1,98 @@
+@import "../scss-variables.scss";
+
+.container {
+  left: 0;
+  top: 0;
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  height: 8vh;
+  background-color: $primaryBackgroundColor;
+  white-space: nowrap;
+  text-align: center;
+  overflow: visible;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.image-container {
+  max-height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3vw;
+}
+
+.authentication-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3vw;
+}
+.books-image {
+  z-index: 1;
+  width: 90px;
+}
+
+.logo-image {
+  z-index: 1;
+  max-width: 4vw;
+}
+
+button {
+  background-color: $primaryBackgroundColor;
+  border: none;
+}
+
+p {
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: clamp(3px, 1vw, 20px);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.course {
+  border: 1px outset #00000054;
+  box-shadow: 1px 2px 0px 0px black;
+  border-radius: 3px;
+  margin: 1px;
+}
+.course-button {
+  padding: 0;
+}

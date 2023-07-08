@@ -1,0 +1,157 @@
+@import "../scss-variables.scss";
+
+body {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+}
+
+.part-1 {
+  margin-top: 8vh;
+}
+
+.part-1-image {
+  width: 100vw;
+}
+
+.text-block {
+  white-space: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.part-2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.part-2-section-1,
+.part-2-section-2 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  column-gap: 17vw;
+  align-items: center;
+}
+.part-2-section-2 {
+  position: absolute;
+  top: 24vw;
+}
+.part-2-section-2-bg-image {
+  width: 100vw;
+  height: auto;
+}
+
+.text-1 {
+  position: relative;
+  color: white;
+  width: 100%;
+  text-align: right;
+}
+
+.text-1-and-button {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: clamp(10px, 3vh, 15px);
+  align-items: flex-start;
+  position: absolute;
+  top: 15vh;
+  left: 44vw;
+}
+
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.text-2-and-button,
+.text-3,
+.text-4 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+  color: black;
+  width: 23vw;
+}
+
+.start-test-button {
+  position: relative;
+  align-self: flex-end;
+}
+
+.learn-more-button {
+  position: relative;
+}
+.part-2-section-1-image,
+.part-2-section-2-image {
+  width: 25vw;
+  height: auto;
+}
+
+.part-3,
+.part-4 {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.part-3-title {
+  font-size: clamp(5px, 1.2vw, 20px);
+}
+.part-4-section-1 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  column-gap: 17vw;
+  align-items: center;
+}
+.courses-cards {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  column-gap: clamp(4px, 7vw, 200px);
+  font-size: clamp(5px, 1.2vw, 20px);
+}
+
+.course-card {
+  background-image: url("../../assets/blocks.jpg");
+  background-size: cover;
+  background-position: center;
+  width: clamp(50px, 20vw, 20vw);
+  height: clamp(60px, 50vh, 30vw);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10%;
+}
+
+.part-3-images {
+  content: fit;
+}
+
+.font-size {
+  font-size: clamp(3px, 1vw, 20px);
+}
+
+@media only screen and (max-width: 700px) {
+  .text-1-and-button {
+    top: 10vh;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1200px) {
+  .text-1-and-button {
+    top: 13vh;
+  }
+}
