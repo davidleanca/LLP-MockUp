@@ -6,52 +6,56 @@ import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent {
-  courses: string[] = ['Beginner', 'Intermediate', 'Upper Intermediate'];
-
-  text1Title: string = 'Online Language Courses';
-  text1Content: string =
+  part1Title: string = 'Online Language Courses';
+  part1Text: string =
     'Offer flexibility, convenience, and accessibility, making them attractive to learners who may have busy schedules or limited access to in-person classes.';
 
-  text2Title: string = 'Start Investing In You';
-  text2Content: string =
-    'Offer flexibility, convenience, and accessibility, making them attractive to learners who may have busy schedules or limited access to in-person classes.';
-
-  text3Title: string = 'Test Your Language Level';
-  text3Content: string =
-    'Offer flexibility, convenience, and accessibility, making them attractive to learners who may have busy schedules or limited access to in-person classes.';
+  part2Title: string = 'Start Investing In You';
+  part2Text: string =
+    'Invest in yourself by learning a new language now! Take that first step, embrace the thrill of acquiring a new language, and unlock the limitless possibilities that await you on this transformative path of self-investment.';
 
   part3Title: string = 'Our Courses';
+  part3Text: string =
+    'Discover a whole new world with the help of our online free-pace language courses. ';
 
-  text4Title: string = 'Learn at your own pace';
-  text4Content: string =
-    'Programs are available in fall, spring, and summer semesters. Many fall and spring programs offer similar shorter  programs in the summer, and some may be combined for a full academic year.';
+  part3Images: string[] = [
+    'assets/Advanced.png',
+    'assets/Intermediate.png',
+    'assets/Advanced.png',
+  ];
+  courses: string[] = ['Beginner', 'Intermediate', 'Advanced'];
+  part4Title: string = 'Test Your Language Level';
+  part4Text: string =
+    'Take the first step towards fluency today! Click below to access our free language test and embark on an exciting journey of language learning. Your future language skills await you—start now and embrace the world of multilingual possibilities!';
 
-  text5Title: string = 'Lifetime access';
-  text5Content: string =
-    'Programs are available in fall, spring, and summer semesters. Many fall and spring programs offer similar shorter  programs in the summer, and some may be combined for a full academic year.';
+  part5Title: string = 'Why learn with us?';
 
-  text6Title: string = 'Certificate of completion';
-  text6Content: string =
-    'Programs are available in fall, spring, and summer semesters. Many fall and spring programs offer similar shorter  programs in the summer, and some may be combined for a full academic year.';
+  part5Section1Title: string = 'Learn at your own pace';
+  part5Section1Text: string =
+    'We know that you are more busy than ever. That’s why we offer you online video courses so you can learn at your own pace, in your own spare time.';
+  part5Section2Title: string = 'Lifetime access';
+  part5Section2Text: string =
+    'No need to explain more - you’ve got lifetime access to our courses on this platform! No extra charges, no monthly fees. One time purches for a lifetime of knowledge.';
+  part5Section3Title: string = 'Learn from experts';
+  part5Section3Text: string =
+    'We are trained tutors, with a vast experience in language teaching and strong language knowledge. ';
+  part5Section4Title: string = 'Certificate of completion';
+  part5Section4Text: string =
+    'You get a certificate of completion of the courses you take! Impress your employee, coworkers and friends not only with your knowledge but with your certificate as well!';
 
   button1Text: string = 'VIEW OUR COURSES';
   button2Text: string = 'LEARN MORE';
   button3Text: string = 'START TEST';
 
-  footerTexts: string[] = [
-    'About us',
-    'Terms and conditions',
-    'GDPR',
-    'Blog',
-    'ANPC',
-    'Contact Us',
-    'FaQ',
-    'Newsletter',
-    'Courses',
+  courseTexts: string[][] = [
+    ['A1 + A2', 'B1', 'B2'],
+    [
+      'Basics of the German Language',
+      'Grammar and Vocabulary for everyday life',
+      'Grammar and Vocabulary  for advanced conversations',
+    ],
   ];
 
-  rightsReservedText: string =
-    '© Lingo Ladder S.R.L 2023 - All rights reserved';
   constructor() {}
 
   ngOnInit() {}

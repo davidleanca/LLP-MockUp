@@ -1,121 +1,244 @@
-<body>
-  <app-header [courses]="courses" class="header"></app-header>
+<div class="container-desktop">
   <div class="part-1">
-    <div>
-      <img class="part-1-image" src="../assets/Part-1-v6.png" />
-      <div class="text-1-and-button">
-        <div class="text-block text-1 font-size">
-          <div>
-            <h3>{{ text1Title }}</h3>
-          </div>
-          <div>{{ text1Content }}</div>
+    <img class="part-1-image-1" src="assets/Part-1-Image.png" />
+    <div class="text-1-and-button">
+      <div class="text-block text-1 font-size">
+        <div>
+          <h1>{{ part1Title }}</h1>
         </div>
-        <app-button1 [Text]="button1Text" class="font-size"></app-button1>
+        <div>{{ part1Text }}</div>
       </div>
+      <button class="primary-button">{{ button1Text }}</button>
     </div>
   </div>
 
   <div class="part-2">
-    <div class="part-2-section-1">
-      <div class="text-block text-2-and-button font-size">
-        <div>
-          <h3>{{ text2Title }}</h3>
-        </div>
-        <div>{{ text2Content }}</div>
-        <app-button2
-          [Text]="button2Text"
-          class="learn-more-button font-size"
-        ></app-button2>
-      </div>
-      <div>
-        <img
-          class="part-2-section-1-image"
-          src="../assets/books.png"
-          alt="Avatar"
-        />
-      </div>
+    <div class="part-2-image-div">
+      <img class="part-2-image" src="assets/Man.jpg" alt="Avatar" />
     </div>
-    <img class="part-2-section-2-bg-image" src="../assets/Part-2-paint.png" />
-    <div class="part-2-section-2">
+    <div class="text-block text-2-and-button font-size">
       <div>
-        <img
-          class="part-2-section-2-image"
-          src="../assets/thinking_woman.jpg"
-          alt="Avatar"
-        />
+        <h2>{{ part2Title }}</h2>
       </div>
-      <div class="text-block text-3 right font-size">
-        <div>
-          <h3>{{ text3Title }}</h3>
-        </div>
-        <div>{{ text3Content }}</div>
-        <app-button2
-          [Text]="button3Text"
-          class="start-test-button font-size"
-        ></app-button2>
-      </div>
+      <div>{{ part2Text }}</div>
+      <button class="secondary-button">{{ button2Text }}</button>
     </div>
+    <app-circle [size]="'4vw'" [top]="'90%'" [left]="'90%'"></app-circle>
   </div>
+
   <div class="part-3">
+    <app-circle [size]="'2vw'" [top]="'-5%'" [left]="'90%'"></app-circle>
     <div class="part-3-title">
-      <h3>{{ part3Title }}</h3>
+      <h2>{{ part3Title }}</h2>
     </div>
-    <div class="courses-cards">
-      <div class="course-card" *ngFor="let course of courses">
-        {{ course }}
+    <div class="part-3-text text-block font-size">
+      {{ part3Text }}
+    </div>
+    <div class="courses-cards font-size">
+      <div class="course-card" *ngFor="let course of courses; let i = index">
+        <h3>{{ course }}</h3>
+
+        <img class="part-3-image" src="{{ part3Images[i] }}" alt="Avatar" />
+
+        <div class="course-card-text-and-title secondary-button">
+          <div class="course-text-level">{{ courseTexts[0][i] }}</div>
+          <div class="font-size text-block courses-card-text">
+            {{ courseTexts[1][i] }}
+          </div>
+        </div>
       </div>
     </div>
+    <app-circle [size]="'4vw'" [top]="'96%'" [left]="'8%'"></app-circle>
+    <app-circle [size]="'2vw'" [top]="'110%'" [left]="'15%'"></app-circle>
   </div>
 
   <div class="part-4">
-    <div class="part-4-section-1">
-      <div>
-        <img
-          class="part-2-section-1-image"
-          src="../assets/books.png"
-          alt="Avatar"
-        />
+    <div>
+      <img
+        class="gray-circles-image"
+        src="assets/Gray-Circles.png"
+        alt="Avatar"
+      />
+    </div>
+    <div class="text-block text-4 font-size">
+      <div class="part-4-title">
+        <h2>{{ part4Title }}</h2>
       </div>
-      <div class="text-block text-4 left font-size">
-        <div>
-          <h3>{{ text4Title }}</h3>
+      <div class="part-4-text">{{ part4Text }}</div>
+      <button class="secondary-button start-test-button">
+        {{ button3Text }}
+      </button>
+    </div>
+    <app-circle [size]="'4vw'" [top]="'70%'" [left]="'85%'"></app-circle>
+    <app-circle [size]="'2vw'" [top]="'90%'" [left]="'82%'"></app-circle>
+  </div>
+
+  <div class="part-5">
+    <div class="part-5-title">
+      <h2>{{ part5Title }}</h2>
+    </div>
+    <div class="part-5-section">
+      <div class="text-block text-5 font-size section-1">
+        <div class="part-5-section-title">
+          <h3>{{ part5Section1Title }}</h3>
         </div>
-        <div>{{ text4Content }}</div>
+        <div class="part-5-section-text">{{ part5Section1Text }}</div>
+      </div>
+      <img
+        class="part-5-section-image"
+        src="assets/Thinking-Woman.png"
+        alt="Avatar"
+      />
+    </div>
+    <div class="part-5-section">
+      <div class="part-5-section-image"></div>
+      <div class="text-block text-5 font-size section-2">
+        <div class="part-5-section-title">
+          <h3>{{ part5Section2Title }}</h3>
+        </div>
+        <div class="part-5-section-text">{{ part5Section2Text }}</div>
       </div>
     </div>
-    <div class="part-4-section-1">
-      <div class="text-block text-4 left font-size">
-        <div>
-          <h3>{{ text5Title }}</h3>
+    <div class="part-5-section">
+      <div class="text-block text-5 font-size section-3">
+        <div class="part-5-section-title">
+          <h3>{{ part5Section3Title }}</h3>
         </div>
-        <div>{{ text5Content }}</div>
+        <div class="part-5-section-text">{{ part5Section3Text }}</div>
       </div>
-      <div>
-        <img
-          class="part-2-section-1-image"
-          src="../assets/books.png"
-          alt="Avatar"
-        />
-      </div>
+      <div class="part-5-section-image"></div>
     </div>
-    <div class="part-4-section-1">
-      <div>
-        <img
-          class="part-2-section-1-image"
-          src="../assets/books.png"
-          alt="Avatar"
-        />
-      </div>
-      <div class="text-block text-4 left font-size">
-        <div>
-          <h3>{{ text6Title }}</h3>
+    <div class="part-5-section">
+      <div class="part-5-section-image"></div>
+      <div class="text-block text-5 font-size section-4">
+        <div class="part-5-section-title">
+          <h3>{{ part5Section4Title }}</h3>
         </div>
-        <div>{{ text6Content }}</div>
+        <div class="part-5-section-text">{{ part5Section4Text }}</div>
       </div>
     </div>
   </div>
-  <app-footer
-    [footerTexts]="footerTexts"
-    [rightsReservedText]="rightsReservedText"
-  ></app-footer>
-</body>
+</div>
+
+<div class="container-mobile">
+  <div class="part-1-mobile">
+    <img class="part-1-image-1-mobile" src="assets/Part-1-Image.png" />
+    <div class="text-1-and-button-mobile">
+      <div class="text-block-mobile text-1-mobile font-size-mobile">
+        <div>
+          <h1>{{ part1Title }}</h1>
+        </div>
+        <div>{{ part1Text }}</div>
+      </div>
+      <button class="primary-button">{{ button1Text }}</button>
+    </div>
+  </div>
+
+  <div class="part-2-mobile">
+    <div class="part-2-image-div-mobile">
+      <img class="part-2-image-mobile" src="assets/Man.jpg" alt="Avatar" />
+    </div>
+    <div class="text-block-mobile text-2-and-button-mobile font-size-mobile">
+      <div>
+        <h2>{{ part2Title }}</h2>
+      </div>
+      <div>{{ part2Text }}</div>
+      <button class="secondary-button">{{ button2Text }}</button>
+    </div>
+    <app-circle [size]="'4vw'" [top]="'90%'" [left]="'90%'"></app-circle>
+  </div>
+
+  <div class="part-3-mobile">
+    <app-circle [size]="'2vw'" [top]="'-5%'" [left]="'90%'"></app-circle>
+    <div class="part-3-title-mobile">
+      <h2>{{ part3Title }}</h2>
+    </div>
+    <div class="part-3-text-mobile text-block-mobile font-size-mobile">
+      {{ part3Text }}
+    </div>
+    <div class="courses-cards-mobile font-size-mobile">
+      <div
+        class="course-card-mobile"
+        *ngFor="let course of courses; let i = index"
+      >
+        <h2>{{ course }}</h2>
+
+        <img
+          class="part-3-image-mobile"
+          src="{{ part3Images[i] }}"
+          alt="Avatar"
+        />
+
+        <div class="course-card-text-and-title secondary-button">
+          <div class="course-text-level-mobile">{{ courseTexts[0][i] }}</div>
+          <div
+            class="font-size-mobile text-block-mobile courses-card-text-mobile"
+          >
+            {{ courseTexts[1][i] }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-circle [size]="'4vw'" [top]="'103%'" [left]="'8%'"></app-circle>
+    <app-circle [size]="'2vw'" [top]="'110%'" [left]="'15%'"></app-circle>
+  </div>
+
+  <div class="part-4-mobile">
+    <div>
+      <img
+        class="gray-circles-image-mobile"
+        src="assets/Gray-Circles.png"
+        alt="Avatar"
+      />
+    </div>
+    <div class="text-block-mobile text-4-mobile font-size-mobile">
+      <div class="part-4-title-mobile">
+        <h2>{{ part4Title }}</h2>
+      </div>
+      <div class="part-4-text-mobile">{{ part4Text }}</div>
+      <button class="secondary-button start-test-button-mobile">
+        {{ button3Text }}
+      </button>
+    </div>
+    <app-circle [size]="'4vw'" [top]="'78%'" [left]="'85%'"></app-circle>
+    <app-circle [size]="'2vw'" [top]="'90%'" [left]="'82%'"></app-circle>
+  </div>
+
+  <div class="part-5-mobile">
+    <div class="part-5-title-mobile">
+      <h2>{{ part5Title }}</h2>
+    </div>
+    <div class="part-5-section-mobile">
+      <div class="text-block-mobile text-5-mobile font-size-mobile section-1">
+        <div class="part-5-section-title-mobile">
+          <h3>{{ part5Section1Title }}</h3>
+        </div>
+        <div class="part-5-section-text-mobile">{{ part5Section1Text }}</div>
+      </div>
+    </div>
+    <div class="part-5-section-mobile">
+      <div class="text-block-mobile text-5-mobile font-size-mobile section-2">
+        <div class="part-5-section-title-mobile">
+          <h3>{{ part5Section2Title }}</h3>
+        </div>
+        <div class="part-5-section-text-mobile">{{ part5Section2Text }}</div>
+      </div>
+    </div>
+    <div class="part-5-section-mobile">
+      <div class="text-block-mobile text-5-mobile font-size-mobile section-3">
+        <div class="part-5-section-title-mobile">
+          <h3>{{ part5Section3Title }}</h3>
+        </div>
+        <div class="part-5-section-text-mobile">{{ part5Section3Text }}</div>
+      </div>
+    </div>
+    <div class="part-5-section-mobile">
+      <div class="text-block-mobile text-5-mobile font-size-mobile section-4">
+        <div class="part-5-section-title-mobile">
+          <h3>{{ part5Section4Title }}</h3>
+        </div>
+        <div class="part-5-section-text-mobile">{{ part5Section4Text }}</div>
+      </div>
+    </div>
+  </div>
+</div>

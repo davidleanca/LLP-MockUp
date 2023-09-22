@@ -1,5 +1,6 @@
-<div class="container">
-  <img class="image" src="../assets/footer-cu-dumbo.png" />
+<footer class="container-desktop">
+  <app-circle [size]="'4vw'" [top]="'50%'" [left]="'90%'"></app-circle>
+  <img class="image" src="assets/Footer.png" />
   <div class="information-container">
     <div class="information-items">
       <button
@@ -9,6 +10,26 @@
         {{ text }}
       </button>
     </div>
+    <hr class="white-line" />
     <div class="rights-reserved white">{{ rightsReservedText }}</div>
   </div>
-</div>
+</footer>
+
+<footer class="container-mobile">
+  <app-circle [size]="'4vw'" [top]="'50%'" [left]="'90%'"></app-circle>
+  <app-circle [size]="'10vw'" [top]="'10%'" [left]="'10%'"></app-circle>
+  <div class="image-mobile">
+    <div class="information-container-mobile">
+      <div class="information-items-mobile">
+        <button
+          class="information-item-mobile white font-size-mobile"
+          *ngFor="let text of footerTexts"
+        >
+          {{ text }}
+        </button>
+      </div>
+      <hr class="white-line-mobile" />
+      <div class="rights-reserved-mobile white">{{ rightsReservedText }}</div>
+    </div>
+  </div>
+</footer>

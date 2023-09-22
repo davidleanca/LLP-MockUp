@@ -1,24 +1,78 @@
-<div class="container">
-  <div class="image-container">
-    <img class="logo-image" src="../assets/logo.png" />
-  </div>
+<header class="container-desktop">
+  <img class="logo-image-desktop" src="assets/Logo.png" />
   <div class="action-buttons-container">
-    <button><p>About us</p></button>
-    <button><p>Home</p></button>
+    <button class="primary-button">{{ HeaderButtons[0] }}</button>
+    <button class="primary-button">{{ HeaderButtons[1] }}</button>
     <div class="dropdown">
-      <p class="dropbtn">Courses</p>
+      <div class="courses-button-and-triangle">
+        <button class="dropdown-button primary-button">
+          {{ HeaderButtons[2] }}
+        </button>
+        <img src="assets/Triangle.png" alt="triangle" class="triangle-icon" />
+      </div>
       <div class="dropdown-content">
-        <button class="course-button" *ngFor="let course of courses">
-          <p class="course">{{ course }}</p>
+        <button class="primary-button" *ngFor="let course of courses">
+          {{ course }}
         </button>
       </div>
     </div>
-    <button><p>Blog</p></button>
-    <button><p>Free Lecture</p></button>
-    <button><p>Test Your Knowledge</p></button>
+
+    <button class="primary-button">{{ HeaderButtons[3] }}</button>
+    <button class="primary-button">{{ HeaderButtons[4] }}</button>
+    <button class="primary-button">{{ HeaderButtons[5] }}</button>
   </div>
+
   <div class="authentication-buttons-container">
-    <button><p>Log In</p></button>
-    <button><p>Sign Up</p></button>
+    <button class="primary-button">{{ HeaderButtons[6] }}</button>
+    <button class="primary-button">{{ HeaderButtons[7] }}</button>
   </div>
-</div>
+</header>
+
+<header class="container-mobile">
+  <div class="header-wrapper-mobile">
+    <img class="logo-image-mobile" src="assets/Logo.png" />
+    <div class="dropdown-mobile">
+      <img
+        class="dropbtn-mobile"
+        src="assets/Dropdown-Icon.svg"
+        (click)="toggleDropdown()"
+      />
+    </div>
+  </div>
+  <div class="dropdown-content-mobile" [class.show]="showDropDown">
+    <button class="primary-button mobile-button">
+      {{ HeaderButtons[0] }}
+    </button>
+    <button class="primary-button mobile-button">
+      {{ HeaderButtons[1] }}
+    </button>
+    <div class="courses-container-mobile">
+      <button class="primary-button mobile-button" (click)="toggleCourses()">
+        {{ HeaderButtons[2] }}
+      </button>
+      <div class="courses-mobile" [class.show]="showCourses">
+        <button
+          class="primary-button course-mobile-button"
+          *ngFor="let course of courses"
+        >
+          {{ course }}
+        </button>
+      </div>
+    </div>
+    <button class="primary-button mobile-button">
+      {{ HeaderButtons[3] }}
+    </button>
+    <button class="primary-button mobile-button">
+      {{ HeaderButtons[4] }}
+    </button>
+    <button class="primary-button mobile-button">
+      {{ HeaderButtons[5] }}
+    </button>
+    <button class="primary-button mobile-button">
+      {{ HeaderButtons[6] }}
+    </button>
+    <button class="primary-button mobile-button">
+      {{ HeaderButtons[7] }}
+    </button>
+  </div>
+</header>

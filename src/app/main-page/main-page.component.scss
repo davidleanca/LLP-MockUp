@@ -1,20 +1,7 @@
-@import "../scss-variables.scss";
+@import "../../styles.scss";
 
-body {
-  overflow: hidden;
-}
-
-.header {
-  position: fixed;
-  z-index: 1;
-}
-
-.part-1 {
-  margin-top: 8vh;
-}
-
-.part-1-image {
-  width: 100vw;
+.container-desktop {
+  display: block;
 }
 
 .text-block {
@@ -23,99 +10,111 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
-.part-2 {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+
+.font-size {
+  font-size: clamp(3px, 1vw, 20px);
 }
 
-.part-2-section-1,
-.part-2-section-2 {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  column-gap: 17vw;
-  align-items: center;
+.part-1 {
+  position: relative;
+  top: 10vh;
 }
-.part-2-section-2 {
-  position: absolute;
-  top: 24vw;
-}
-.part-2-section-2-bg-image {
+
+.part-1-image-1 {
   width: 100vw;
-  height: auto;
 }
 
 .text-1 {
   position: relative;
   color: white;
   width: 100%;
-  text-align: right;
+  text-align: justify;
 }
 
 .text-1-and-button {
-  width: 25vw;
+  width: 26vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: clamp(10px, 3vh, 15px);
-  align-items: flex-start;
+  row-gap: clamp(10px, 3vw, 300px);
+  align-items: center;
   position: absolute;
-  top: 15vh;
-  left: 44vw;
+  top: 20%;
+  left: 15%;
 }
 
-.left {
-  text-align: left;
+.part-2 {
+  position: relative;
+  width: 100vw;
+  top: 10vh;
+  display: flex;
+  align-items: center;
+  margin: 5vw 0;
 }
-.right {
-  text-align: right;
+
+.part-2-image-div {
+  background-color: $grayColor;
+  display: flex;
+  border-radius: 20%;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  width: 23%;
 }
-.text-2-and-button,
-.text-3,
-.text-4 {
+
+.part-2-image {
+  width: 80%;
+  height: auto;
+  padding: 8%;
+  border-radius: 20%;
+}
+
+.text-2-and-button {
+  margin: auto;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  row-gap: 2vh;
+  row-gap: 1vw;
   color: black;
-  width: 23vw;
+  width: 23%;
 }
 
-.start-test-button {
-  position: relative;
-  align-self: flex-end;
-}
-
-.learn-more-button {
-  position: relative;
-}
-.part-2-section-1-image,
-.part-2-section-2-image {
-  width: 25vw;
-  height: auto;
-}
-
-.part-3,
-.part-4 {
+.part-3 {
   position: relative;
   text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  top: 10vh;
+  margin: 7vw auto;
+  width: 90%;
+  border-radius: clamp(10px, 10vw, 100px);
+  background-color: $grayColor;
 }
+
+.part-3-image {
+  max-height: 10vw;
+  padding: 8%;
+  border-radius: 20%;
+  max-width: 15vw;
+}
+
 .part-3-title {
   font-size: clamp(5px, 1.2vw, 20px);
 }
-.part-4-section-1 {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  column-gap: 17vw;
+
+.part-3-text {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+  color: black;
+  width: 27vw;
+  margin: 0 auto;
 }
+
 .courses-cards {
-  width: 100vw;
+  padding: 5%;
   display: flex;
   justify-content: center;
   column-gap: clamp(4px, 7vw, 200px);
@@ -123,35 +122,420 @@ body {
 }
 
 .course-card {
-  background-image: url("../../assets/blocks.jpg");
-  background-size: cover;
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  width: clamp(50px, 20vw, 20vw);
-  height: clamp(60px, 50vh, 30vw);
-  border: 1px solid black;
+  width: 20vw;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   border-radius: 10%;
 }
 
-.part-3-images {
-  content: fit;
+.course-card-text-and-title {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  row-gap: 1vw;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 1px;
+  border-radius: clamp(10px, 2vw, 50px);
 }
 
-.font-size {
-  font-size: clamp(3px, 1vw, 20px);
+.course-text-level {
+  font-weight: bold;
+  font-size: clamp(5px, 1.2vw, 20px);
 }
 
-@media only screen and (max-width: 700px) {
-  .text-1-and-button {
-    top: 10vh;
+.courses-card-text {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 80%;
+}
+
+.part-4 {
+  position: relative;
+  text-align: justify;
+  width: 100vw;
+  height: auto;
+  top: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gray-circles-image {
+  width: 100vw;
+  height: auto;
+}
+
+.text-4 {
+  align-items: flex-start;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  row-gap: 2vh;
+  color: black;
+  left: 35%;
+  width: 30vw;
+}
+
+.part-4-title {
+  text-align: center;
+  width: 100%;
+}
+
+.part-4-text {
+  text-align: center;
+  width: 100%;
+}
+
+.start-test-button {
+  position: relative;
+  align-self: center;
+  height: 2vw;
+}
+
+.part-5 {
+  display: flex;
+  flex-direction: column;
+  top: 10vh;
+  justify-content: center;
+  row-gap: 2vh;
+}
+
+.part-5-title {
+  text-align: center;
+  font-size: clamp(5px, 1.2vw, 20px);
+}
+
+.part-5-section {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section-1 {
+  background-color: #7583ffcc;
+}
+
+.section-2 {
+  background-color: #2cd89666;
+}
+
+.section-3 {
+  background-color: #f5c5052e;
+}
+
+.section-4 {
+  background-color: #7684fe80;
+}
+
+.part-5-section-image {
+  width: 20%;
+}
+
+.text-5 {
+  padding: 2% 4%;
+  border-radius: clamp(10px, 5vw, 500px);
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+  color: black;
+  width: 20vw;
+}
+
+.part-5-section-title {
+  text-align: left;
+  width: 100%;
+}
+.part-5-section-text {
+  text-align: left;
+  width: 100%;
+}
+
+.container-mobile {
+  display: none;
+}
+
+.text-block-mobile {
+  white-space: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.font-size-mobile {
+  font-size: clamp(3px, 3.5vw, 20px);
+}
+
+.part-1-mobile {
+  position: relative;
+  top: 16vw;
+}
+
+.part-1-image-1-mobile {
+  height: 50vw;
+}
+
+.text-1-mobile {
+  position: relative;
+  color: white;
+  width: 100%;
+  text-align: justify;
+}
+
+.text-1-and-button-mobile {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: clamp(10px, 6vw, 300px);
+  align-items: center;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  height: 80%;
+}
+
+.part-2-mobile {
+  position: relative;
+  top: 25vw;
+  width: 100vw;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin: 5vw 0;
+}
+
+.part-2-image-div-mobile {
+  background-color: $grayColor;
+  display: flex;
+  border-radius: 20%;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  width: 80%;
+}
+
+.part-2-image-mobile {
+  width: 80%;
+  height: auto;
+  padding: 8%;
+  border-radius: 20%;
+}
+
+.text-2-and-button-mobile {
+  margin: auto;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 1vw;
+  color: black;
+  width: 70%;
+}
+
+.part-3-mobile {
+  position: relative;
+  text-align: center;
+  display: flex;
+  top: 25vw;
+  justify-content: center;
+  flex-direction: column;
+  margin: 7vw auto;
+  width: 90%;
+  border-radius: clamp(10px, 10vw, 100px);
+  background-color: $grayColor;
+}
+
+.part-3-image-mobile {
+  width: 80%;
+  height: auto;
+  padding: 8%;
+  border-radius: 20%;
+}
+
+.part-3-title-mobile {
+  font-size: clamp(5px, 3vw, 20px);
+}
+
+.part-3-text-mobile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+  color: black;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.courses-cards-mobile {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: clamp(4px, 7vw, 200px);
+  font-size: clamp(5px, 3vw, 20px);
+}
+
+.course-card-mobile {
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10%;
+}
+
+.course-card-text-and-title-mobile {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  row-gap: 1vw;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 1px;
+  border-radius: clamp(10px, 5vw, 500px);
+}
+
+.course-text-level-mobile {
+  font-weight: bold;
+  font-size: clamp(5px, 5vw, 20px);
+}
+
+.courses-card-text-mobile {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 80%;
+}
+
+.part-4-mobile {
+  position: relative;
+  text-align: justify;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  top: 25vw;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gray-circles-image-mobile {
+  height: 85vw;
+  width: auto;
+}
+
+.text-4-mobile {
+  align-items: flex-start;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2vh;
+  color: black;
+  width: 100vw;
+}
+
+.part-4-title-mobile {
+  text-align: center;
+  width: 100%;
+}
+
+.part-4-text-mobile {
+  text-align: center;
+  width: 100%;
+}
+
+.start-test-button-mobile {
+  position: relative;
+  align-self: center;
+  height: 6vw;
+}
+
+.part-5-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 25vw;
+  row-gap: 2vh;
+}
+
+.part-5-title-mobile {
+  text-align: center;
+  font-size: clamp(5px, 5vw, 20px);
+}
+
+.part-5-section-mobile {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text-5-mobile {
+  padding: 2% 4%;
+  border-radius: clamp(10px, 5vw, 500px);
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+  color: black;
+  width: 80vw;
+}
+
+.part-5-section-title-mobile {
+  text-align: left;
+  width: 100%;
+}
+
+.part-5-section-text-mobile {
+  text-align: left;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-desktop {
+    display: none;
+  }
+
+  .container-mobile {
+    display: block;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    font-size: clamp(1px, 3vw, 20px);
+    border-radius: 24px;
   }
 }
 
-@media only screen and (min-width: 701px) and (max-width: 1200px) {
-  .text-1-and-button {
-    top: 13vh;
-  }
+@media (min-width: 601px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
 }

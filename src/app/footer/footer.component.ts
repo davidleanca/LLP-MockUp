@@ -6,6 +6,16 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  @Input() footerTexts: string[] = [];
-  @Input() rightsReservedText: string = '';
+  footerTexts: string[] = [
+    'About us',
+    'Terms and conditions',
+    'GDPR',
+    'Blog',
+    'ANPC',
+    'Contact Us',
+    'FaQ',
+    'Newsletter',
+    'Courses',
+  ];
+  rightsReservedText: string = '© Lingo Lab S.R.L 2023 - All rights reserved';
 }

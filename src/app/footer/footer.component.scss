@@ -1,28 +1,29 @@
-@import "../scss-variables.scss";
+@import "../../styles.scss";
 
 .image {
   width: 100vw;
   margin: 0;
   left: 0;
-
   display: block;
-  background-color: $primaryBackgroundColor;
+  background-color: $blueColor;
   height: auto;
 }
-.container {
+
+.container-desktop {
+  display: block;
   position: relative;
-  background-color: $primaryBackgroundColor;
+  background-color: $blueColor;
   width: 100%;
 }
 
 .information-container {
   position: absolute;
-  top: 40%;
+  top: 65%;
   left: 30%;
-  height: 60%;
+  height: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -31,10 +32,11 @@
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 1vw;
-  row-gap: 1vh;
-  max-height: calc(100vh - 40px);
+  row-gap: 1vw;
+  height: 70%;
   width: 100%;
 }
+
 .information-item {
   width: 30%;
   text-align: center;
@@ -44,6 +46,13 @@
   height: 10%;
   margin: 0;
 }
+
+.white-line {
+  border: none;
+  border-top: 1px solid white;
+  width: 50%;
+}
+
 .rights-reserved {
   position: relative;
   background-color: transparent;
@@ -56,12 +65,107 @@
 button {
   background-color: transparent;
   border: none;
-
   cursor: pointer;
 }
+
 .white {
   color: white;
 }
+
 .font-size {
   font-size: clamp(3px, 0.9vw, 20px);
+}
+
+.image-mobile {
+  width: auto;
+  height: 100vw;
+  margin: 0;
+  left: 0;
+  position: relative;
+  display: block;
+}
+
+.container-mobile {
+  top: 35vw;
+  display: none;
+  position: relative;
+  background-color: $blueColor;
+  width: 100%;
+}
+
+.information-container-mobile {
+  position: absolute;
+  top: 5%;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.information-items-mobile {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1vw;
+  height: 80%;
+  width: 100%;
+}
+
+.information-item-mobile {
+  width: 80vw;
+  left: 10%;
+  text-align: center;
+  margin: 10px 0;
+  font-size: clamp(3px, 1vw, 20px);
+  text-align: center;
+  height: 10%;
+  margin: 0;
+}
+
+.white-line-mobile {
+  border: none;
+  border-top: 1px solid white;
+  width: 50%;
+}
+
+.rights-reserved-mobile {
+  position: relative;
+  background-color: transparent;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(2px, 3vw, 18px);
+}
+
+.font-size-mobile {
+  font-size: clamp(3px, 3.5vw, 20px);
+}
+
+@media only screen and (max-width: 600px) {
+  .container-desktop {
+    display: none;
+  }
+
+  .container-mobile {
+    display: block;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    font-size: clamp(1px, 3vw, 20px);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
 }

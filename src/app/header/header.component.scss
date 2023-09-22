@@ -1,26 +1,21 @@
-@import "../scss-variables.scss";
+@import "../../styles.scss";
 
-.container {
+.container-desktop {
   left: 0;
   top: 0;
   margin: 0;
-  position: relative;
   width: 100vw;
-  height: 8vh;
-  background-color: $primaryBackgroundColor;
+  height: 10vh;
+  background-color: $blueColor;
   white-space: nowrap;
   text-align: center;
   overflow: visible;
   align-items: center;
+  align-items: center;
   display: flex;
   justify-content: space-around;
-}
-
-.image-container {
-  max-height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  z-index: 1;
 }
 
 .action-buttons-container {
@@ -36,43 +31,28 @@
   justify-content: center;
   column-gap: 3vw;
 }
-.books-image {
+
+.triangle-icon {
+  width: 1vw;
+  height: 1vw;
+  margin-left: 0.5vw;
+  vertical-align: middle;
+}
+
+.logo-image-desktop {
   z-index: 1;
-  width: 90px;
-}
-
-.logo-image {
-  z-index: 1;
-  max-width: 4vw;
-}
-
-button {
-  background-color: $primaryBackgroundColor;
-  border: none;
-}
-
-p {
-  color: white;
-  text-align: left;
-  cursor: pointer;
-  font-size: clamp(3px, 1vw, 20px);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 8vw;
+  height: auto;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
-.dropbtn {
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+.courses-button-and-triangle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
 }
 
 .dropdown-content {
@@ -83,16 +63,119 @@ p {
 
 .dropdown:hover .dropdown-content {
   display: flex;
-
   flex-direction: column;
+  row-gap: 0.1vw;
 }
 
-.course {
-  border: 1px outset #00000054;
-  box-shadow: 1px 2px 0px 0px black;
-  border-radius: 3px;
-  margin: 1px;
+.container-mobile {
+  display: none;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 100vw;
+  height: 16vw;
+  background-color: $blueColor;
+  white-space: nowrap;
+  text-align: center;
+  overflow: visible;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 1;
 }
-.course-button {
-  padding: 0;
+
+.header-wrapper-mobile {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.logo-image-mobile {
+  z-index: 1;
+  width: 25vw;
+}
+
+.dropdown-mobile {
+  text-align: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.courses-container-mobile {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.courses-mobile.show {
+  display: flex;
+}
+
+.courses-mobile {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  left: 71vw;
+  row-gap: 1.5vw;
+}
+
+.course-mobile-button {
+  width: 25vw;
+}
+
+.dropbtn-mobile {
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 9vw;
+}
+
+.dropdown-content-mobile {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+  background-color: #7482fe;
+  width: 100vw;
+  row-gap: 1.5vw;
+  margin-left: 0;
+  height: 65vw;
+  top: 16vw;
+}
+
+.dropdown-content-mobile.show {
+  display: flex;
+}
+
+.mobile-button {
+  width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-desktop {
+    display: none;
+  }
+
+  .container-mobile {
+    display: flex;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .primary-button {
+    font-size: clamp(1px, 3vw, 20px);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
 }

@@ -1,0 +1,9 @@
+@import "../../styles.scss";
+
+.circle {
+  background-color: $yellowColor;
+  border-radius: 50%;
+  display: inline-flex;
+  z-index: 2;
+  position: absolute;
+}
